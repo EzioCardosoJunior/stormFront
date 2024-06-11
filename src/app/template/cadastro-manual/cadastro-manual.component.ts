@@ -16,18 +16,18 @@ export class CadastroManualComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private dataSTRMService: DataSTRMService) {
     this.form = this.fb.group({
-      vigenciaInicial: ['', Validators.required],
+      vigenciaInicial: [''],
       concessionaria: ['', Validators.required],
       uf: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]],
       unidadeInstalacao: ['', Validators.required],
-      numeroCliente: ['', Validators.required],
+      numeroCliente: [''],
       empresa: ['', Validators.required],
       descricaoUnidade: ['', Validators.required],
       tipo: ['', Validators.required],
       modalidade: ['', Validators.required],
       clienteRural: ['', Validators.required],
-      tipoOrganizacao: ['', Validators.required],
-      tipoLigacao: ['', Validators.required],
+      tipoOrganizacao: [''],
+      tipoLigacao: [''],
       cpfCnpj: ['', [Validators.required, Validators.pattern(/^\d{11}|\d{14}$/)]],
       email: ['', [Validators.required, Validators.pattern(/^\d{11}|\d{14}$/)]],
       senha: ['', [Validators.required, Validators.minLength(6)]],

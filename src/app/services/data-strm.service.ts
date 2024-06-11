@@ -19,6 +19,7 @@ export class DataSTRMService {
     };
     
     existingData.push(newData);
+    alert (1)
     localStorage.setItem(this.storageKey, JSON.stringify(existingData));
   }
 
