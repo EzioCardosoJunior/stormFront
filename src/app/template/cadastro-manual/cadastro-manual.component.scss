@@ -1,0 +1,51 @@
+.content {
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.button-container .align-start {
+    margin-right: auto;
+    /* Isso empurrará os botões para a direita */
+}
+
+.styled-button {
+    width: 231px;
+    height: 47px;
+    border-radius: 4px;
+    background-color: #6691e7;
+    color: white;
+}
+
+.styled-button-cancel {
+    width: 231px;
+    height: 47px;
+    border-radius: 4px;
+    background-color: #FF0000;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    /* Espaçamento entre o label e o campo de entrada */
+    font-size: 16px;
+    /* Tamanho da fonte do label */
+    font-weight: 500;
+    /* Peso da fonte do label */
+}

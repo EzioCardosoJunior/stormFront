@@ -1,0 +1,14 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+$strm-toolbar-background: #fff;
+$strm-toolbar-color: #000000;
+
+.strm-toolbar {
+  background: $strm-toolbar-background;
+  color: $strm-toolbar-color;
+}
+

@@ -1,0 +1,246 @@
+<div class="content">
+  <div class="button-container">
+    <div class="align-start">Cadastro de nova UC</div>
+    <button class="styled-button-cancel" routerLink="/home">Cancelar</button>
+    <button class="styled-button" (click)="saveFormData()">Cadastrar UC</button>
+  </div>
+
+  <form [formGroup]="form">
+    <div>
+      <label for="vigencia-inicial">Vigência Inicial</label>
+      <mat-form-field appearance="outline">
+        <input matInput [matDatepicker]="picker" formControlName="vigenciaInicial" id="vigencia-inicial">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <div>
+        <label for="concessionaria">Concessionária</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 1</mat-label>
+          <mat-select formControlName="concessionaria">
+            <mat-option value="Amazonas Energia">Amazonas Energia</mat-option>
+            <mat-option value="CELESC-SC">CELESC-SC</mat-option>
+            <mat-option value="CELPE">CELPE</mat-option>
+            <mat-option value="CEMAR - Companhia Energética do Maranhão">CEMAR - Companhia Energética do
+              Maranhão</mat-option>
+            <mat-option value="CEMIG">CEMIG</mat-option>
+            <mat-option value="COPEL">COPEL</mat-option>
+            <mat-option value="CPFL Paulista">CPFL Paulista</mat-option>
+            <mat-option value="CPFL Piratininga">CPFL Piratininga</mat-option>
+            <mat-option value="CPFL RGE">CPFL RGE</mat-option>
+            <mat-option value="CPFL Santa Cruz">CPFL Santa Cruz</mat-option>
+            <mat-option value="DMED">DMED</mat-option>
+            <mat-option value="EDP ES">EDP ES</mat-option>
+            <mat-option value="EDP SP">EDP SP</mat-option>
+            <mat-option value="ELFSM">ELFSM</mat-option>
+            <mat-option value="Enel CE">Enel CE</mat-option>
+            <mat-option value="Enel RJ">Enel RJ</mat-option>
+            <mat-option value="Enel SP">Enel SP</mat-option>
+            <mat-option value="Energisa AC">Energisa AC</mat-option>
+            <mat-option value="Energisa PB">Energisa PB</mat-option>
+            <mat-option value="Energisa Minas-Rio">Energisa Minas-Rio</mat-option>
+            <mat-option value="Energisa MS">Energisa MS</mat-option>
+            <mat-option value="Energisa MT">Energisa MT</mat-option>
+            <mat-option value="Energisa RO">Energisa RO</mat-option>
+            <mat-option value="Energisa SE">Energisa SE</mat-option>
+            <mat-option value="Energisa Sul Sudeste">Energisa Sul Sudeste</mat-option>
+            <mat-option value="Energisa TO">Energisa TO</mat-option>
+            <mat-option value="Equatorial AL">Equatorial AL</mat-option>
+            <mat-option value="Equatorial CEA AP">Equatorial CEA AP</mat-option>
+            <mat-option value="CEEE - RS">CEEE - RS</mat-option>
+            <mat-option value="Equatorial GO">Equatorial GO</mat-option>
+            <mat-option value="Equatorial MA">Equatorial MA</mat-option>
+            <mat-option value="Equatorial PA">Equatorial PA</mat-option>
+            <mat-option value="Equatorial PI">Equatorial PI</mat-option>
+            <mat-option value="Light">Light</mat-option>
+            <mat-option value="Neoenergia Brasília">Neoenergia Brasília</mat-option>
+            <mat-option value="Neoenergia COELBA">Neoenergia COELBA</mat-option>
+            <mat-option value="Neoenergia RN">Neoenergia RN</mat-option>
+            <mat-option value="Neoenergia Elektro">Neoenergia Elektro</mat-option>
+            <mat-option value="Neoenergia PE">Neoenergia PE</mat-option>
+            <mat-option value="Roraima Energia">Roraima Energia</mat-option>
+            <mat-option value="Sulgipe">Sulgipe</mat-option>
+            <mat-option value="Energisa SP">Energisa SP</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      <div>
+        <label for="uf">UF</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 2</mat-label>
+          <mat-select formControlName="uf">
+            <mat-option value="AC">AC</mat-option>
+            <mat-option value="AL">AL</mat-option>
+            <mat-option value="AP">AP</mat-option>
+            <mat-option value="AM">AM</mat-option>
+            <mat-option value="BA">BA</mat-option>
+            <mat-option value="CE">CE</mat-option>
+            <mat-option value="DF">DF</mat-option>
+            <mat-option value="ES">ES</mat-option>
+            <mat-option value="GO">GO</mat-option>
+            <mat-option value="MA">MA</mat-option>
+            <mat-option value="MT">MT</mat-option>
+            <mat-option value="MS">MS</mat-option>
+            <mat-option value="MG">MG</mat-option>
+            <mat-option value="PA">PA</mat-option>
+            <mat-option value="PB">PB</mat-option>
+            <mat-option value="PR">PR</mat-option>
+            <mat-option value="PE">PE</mat-option>
+            <mat-option value="PI">PI</mat-option>
+            <mat-option value="RJ">RJ</mat-option>
+            <mat-option value="RN">RN</mat-option>
+            <mat-option value="RS">RS</mat-option>
+            <mat-option value="RO">RO</mat-option>
+            <mat-option value="RR">RR</mat-option>
+            <mat-option value="SC">SC</mat-option>
+            <mat-option value="SP">SP</mat-option>
+            <mat-option value="SE">SE</mat-option>
+            <mat-option value="TO">TO</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      <div>
+        <label for="unidadeInstalacao">N° unidade/Instalação</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira número</mat-label>
+          <input matInput formControlName="unidadeInstalacao">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label for="numeroCliente">N° cliente</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira número</mat-label>
+          <input matInput formControlName="numeroCliente">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="empresa">Empresa</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira nome</mat-label>
+          <input matInput formControlName="empresa">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label for="descricaoUnidade">Descrição da unidade *</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira descrição</mat-label>
+          <input matInput formControlName="descricaoUnidade">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label for="tipo">Tipo *</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 7</mat-label>
+          <mat-select formControlName="tipo">
+            <mat-option value="option">Consumidor</mat-option>
+            <mat-option value="option">Geradora </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label for="modalidade">Modalidade</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 8</mat-label>
+          <mat-select formControlName="modalidade">
+            <mat-option value="A1">A1</mat-option>
+            <mat-option value="A2">A2</mat-option>
+            <mat-option value="A3">A3</mat-option>
+            <mat-option value="A3a">A3a</mat-option>
+            <mat-option value="A4">A4</mat-option>
+            <mat-option value="A optante B">A optante B</mat-option>
+            <mat-option value="AS">AS</mat-option>
+            <mat-option value="B1">B1</mat-option>
+            <mat-option value="B2">B2</mat-option>
+            <mat-option value="B3">B3</mat-option>
+            <mat-option value="B3 Branca">B3 Branca</mat-option>
+            <mat-option value="B4">B4</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      <div>
+        <label for="clienteRural">É cliente rural? *</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 9</mat-label>
+          <mat-select formControlName="clienteRural">
+            <mat-option value="option">Sim</mat-option>
+            <mat-option value="option">Não</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="tipoOrganizacao">Tipo de organização</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 10</mat-label>
+          <mat-select formControlName="tipoOrganizacao">
+            <mat-option value="option">Associação</mat-option>
+            <mat-option value="option">Consórcio</mat-option>
+            <mat-option value="option">Cooperativa</mat-option>
+            <mat-option value="option">Autoconsumo</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <label for="tipoLigacao">Tipo de ligação</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Campo 11</mat-label>
+          <mat-select formControlName="tipoLigacao">
+            <mat-option value="option">Monofásico</mat-option>
+            <mat-option value="option">Bifásico</mat-option>
+            <mat-option value="option">Trifásico</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div>
+      <div class="align-start">Dados de login na concessionária</div>
+      <br><br>
+      <div class="row">
+        <div>
+          <label for="cpfCnpj">CPF/CNPJ *</label>
+          <mat-form-field appearance="outline">
+            <input matInput [mask]="cpfCnpjMask" (input)="updateMask()" placeholder="Digite o CPF ou CNPJ"
+              formControlName="cpfCnpj">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <label for="email">E-mail *</label>
+          <mat-form-field appearance="outline">
+            <mat-label>Campo 11</mat-label>
+            <input type="email" matInput formControlName="email">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <label for="senha">Senha *</label>
+          <mat-form-field appearance="outline">
+            <mat-label>Campo 11</mat-label>
+            <input matInput formControlName="senha">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
