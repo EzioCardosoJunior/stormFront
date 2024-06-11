@@ -1,6 +1,7 @@
 import { DataSTRMService } from './../../services/data-strm.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastro-manual',
@@ -41,7 +42,13 @@ export class CadastroManualComponent implements OnInit {
     if (this.form.valid) {
       this.dataSTRMService.saveData(this.form.value);
     } else {
-      console.log('Form is invalid');
+      
+      Swal.fire({
+        icon: "error",
+        title: "Campos obrigatórios",
+        text: "Preencha todos os campos marcados com *",
+      });
+      
     }
   }
 
